@@ -1,0 +1,28 @@
+[package]
+name = "vecx"
+version = "0.1.0"
+edition = "2021"
+
+[dev-dependencies]
+criterion = { version = "0.5.1", features = ["html_reports"] }
+any_vec = "0.13.0"
+
+[[bench]]
+name = "iter"
+harness = false
+
+[[bench]]
+name = "purge"
+harness = false
+
+[[bench]]
+name = "push"
+harness = false
+
+[[bench]]
+name = "remove"
+harness = false
+
+[[bench]]
+name = "reserve"
+harness = false
