@@ -85,7 +85,7 @@ impl<'a> TypeErasedValueRef<'a> {
     /// # Safety
     ///
     /// The caller must ensure that this value can be interpreted as the specified type.
-    pub unsafe fn get<T>(&self) -> &T {
+    pub unsafe fn get<T>(&self) -> &'a T {
         let ptr = self.ptr as *const T;
 
         // SAFETY: Caller already ensured that `ptr` is not null.

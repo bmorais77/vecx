@@ -2121,8 +2121,8 @@ mod tests {
         assert!(!vec.is_empty());
 
         unsafe {
-            let value = vec.get_unchecked(2);
-            assert_eq!(3, *value.get::<i32>());
+            let value = vec.get_unchecked(2).get::<i32>();
+            assert_eq!(3, *value);
         }
     }
 
